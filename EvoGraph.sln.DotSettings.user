@@ -7,31 +7,10 @@
 	
 	
 	
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=ea5356c9_002D1f91_002D49be_002Da826_002Df79edfde91cc/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Test1" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::79C1C1E5-19CA-4925-807C-F1043543BE03::net9.0::EvoGraphTest.AgentTest.NumericGenAlgTest.BasicNumericGenAlgTest&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::79C1C1E5-19CA-4925-807C-F1043543BE03::net9.0::EvoGraphTest.GraphTest.BasicGraphTests.GraphCreationTest&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::79C1C1E5-19CA-4925-807C-F1043543BE03::net9.0::EvoGraphTest.GraphTest.BasicGraphTests.SerializationTest&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::79C1C1E5-19CA-4925-807C-F1043543BE03::net9.0::EvoGraphTest.GraphTest.BasicGraphTests.DeserializationTest&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::79C1C1E5-19CA-4925-807C-F1043543BE03::net9.0::EvoGraphTest.GraphTest.GraphAlgorithmsTest.GraphConnectivityTests.TestConnectivityComponents_SingleComponent&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::79C1C1E5-19CA-4925-807C-F1043543BE03::net9.0::EvoGraphTest.GraphTest.GraphAlgorithmsTest.GraphConnectivityTests.TestConnectivityComponents_TwoComponents&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::79C1C1E5-19CA-4925-807C-F1043543BE03::net9.0::EvoGraphTest.GraphTest.GraphAlgorithmsTest.GraphConnectivityTests.TestConnectivityComponents_DisconnectedNodes&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::79C1C1E5-19CA-4925-807C-F1043543BE03::net9.0::EvoGraphTest.GraphTest.GraphAlgorithmsTest.GraphDfsOrderTests.TestDfsOrderIndependent_ConnectedGraph&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::79C1C1E5-19CA-4925-807C-F1043543BE03::net9.0::EvoGraphTest.GraphTest.GraphAlgorithmsTest.GraphDfsOrderTests.TestDfsOrderIndependent_DisconnectedGraph&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::79C1C1E5-19CA-4925-807C-F1043543BE03::net9.0::EvoGraphTest.GraphTest.GraphAlgorithmsTest.GraphBfsOrderTests.TestBfsOrderIndependent_ConnectedGraph&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::79C1C1E5-19CA-4925-807C-F1043543BE03::net9.0::EvoGraphTest.GraphTest.GraphAlgorithmsTest.GraphBfsOrderTests.TestBfsOrderIndependent_DisconnectedGraph&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::79C1C1E5-19CA-4925-807C-F1043543BE03::net9.0::EvoGraphTest.GraphTest.GraphAlgorithmsTest.GraphTspTests.TestTsp_ThreeVertices&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::79C1C1E5-19CA-4925-807C-F1043543BE03::net9.0::EvoGraphTest.GraphTest.GraphAlgorithmsTest.GraphTspTests.TestTsp_FiveVertices&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::79C1C1E5-19CA-4925-807C-F1043543BE03::net9.0::EvoGraphTest.GraphTest.GraphAlgorithmsTest.GraphDfsOrderTests.TestBfsOrderIndependent_InvalidStartNode&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::79C1C1E5-19CA-4925-807C-F1043543BE03::net9.0::EvoGraphTest.GraphTest.GraphAlgorithmsTest.GraphBfsOrderTests.TestBfsOrderIndependent_InvalidStartNode&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::79C1C1E5-19CA-4925-807C-F1043543BE03::net9.0::EvoGraphTest.GraphTest.GraphAlgorithmsTest.GraphPathCostTests.TestPathCost_InvalidEdge&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::79C1C1E5-19CA-4925-807C-F1043543BE03::net9.0::EvoGraphTest.GraphTest.GraphAlgorithmsTest.GraphPathCostTests.TestPathCost_InvalidStartNode&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::79C1C1E5-19CA-4925-807C-F1043543BE03::net9.0::EvoGraphTest.GraphTest.GraphAlgorithmsTest.GraphPathCostTests.TestPathCost_ValidPathThreeNodes&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::79C1C1E5-19CA-4925-807C-F1043543BE03::net9.0::EvoGraphTest.MnistNeuralEvoTest.NeuralGenAlgTest.BasicNumericGenAlgTest&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::79C1C1E5-19CA-4925-807C-F1043543BE03::net9.0::EvoGraphTest.NNTest.Activations.Test&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::79C1C1E5-19CA-4925-807C-F1043543BE03::net9.0::EvoGraphTest.NNTest.NeuralNetwork.TestForward&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::79C1C1E5-19CA-4925-807C-F1043543BE03::net9.0::EvoGraphTest.NNTest.Encoder.Encoder.Test&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::79C1C1E5-19CA-4925-807C-F1043543BE03::net9.0::EvoGraphTest.NNTest.NeuralGenAlgTest.BasicNumericGenAlgTest&lt;/TestId&gt;&#xD;
-  &lt;/TestAncestor&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=ea5356c9_002D1f91_002D49be_002Da826_002Df79edfde91cc/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Test1" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;NUnit3x::79C1C1E5-19CA-4925-807C-F1043543BE03::net9.0::EvoGraphTest.SimpleFunctionsTest.GenAlgExampleTest.FunctionMinimizingTest&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::79C1C1E5-19CA-4925-807C-F1043543BE03::net9.0::EvoGraphTest.MatrixRecoveryTest.GenAlgRecoveryTest.MatrixRecoveryTest&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String>
 	</wpf:ResourceDictionary>

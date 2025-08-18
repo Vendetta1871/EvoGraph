@@ -25,4 +25,8 @@
       <ProjectReference Include="..\EvoGraph\EvoGraph.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <None Include="bin\Debug\net9.0\nlog.config" />
+    </ItemGroup>
+
 </Project>
