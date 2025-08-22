@@ -11,6 +11,7 @@
   &lt;TestAncestor&gt;
     &lt;TestId&gt;NUnit3x::79C1C1E5-19CA-4925-807C-F1043543BE03::net9.0::EvoGraphTest.SimpleFunctionsTest.GenAlgExampleTest.FunctionMinimizingTest&lt;/TestId&gt;
     &lt;TestId&gt;NUnit3x::79C1C1E5-19CA-4925-807C-F1043543BE03::net9.0::EvoGraphTest.MatrixRecoveryTest.GenAlgRecoveryTest.MatrixRecoveryTest&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::79C1C1E5-19CA-4925-807C-F1043543BE03::net9.0::EvoGraphTest.GraphPaintingTest.GenAlgPaintingTest.GraphPaintingTest&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String>
 	</wpf:ResourceDictionary>

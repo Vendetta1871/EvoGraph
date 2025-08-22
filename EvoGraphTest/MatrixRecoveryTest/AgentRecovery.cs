@@ -40,7 +40,7 @@ public class AgentRecovery : IAgent
         var other = agent as AgentRecovery ?? throw WrongArgumentType(agent);
         var clusters = Chromosome.Distinct().Count();
         var otherClusters = other.Chromosome.Distinct().Count();
-        return clusters == otherClusters ? 0.0 : double.MaxValue;
+        return Math.Abs(clusters - otherClusters);
     }
 
     public IAgent Crossover(IAgent agent)

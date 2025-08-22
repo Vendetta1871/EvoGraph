@@ -14,6 +14,8 @@ public class FitnessFunctionPainting : IFitnessFunction
         BestAgent = new AgentPainting(new int[matrix.GetLength(0)]);
         _neightbors = new List<int>[matrix.GetLength(0)];
         for (var i = 0; i < _neightbors.Length; ++i)
+            _neightbors[i] = new List<int>();
+        for (var i = 0; i < _neightbors.Length; ++i)
         for (var j = i + 1; j < _neightbors.Length; ++j)
         {
             if (Graph[i, j] != 1) continue;

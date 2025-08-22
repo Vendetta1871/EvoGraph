@@ -133,8 +133,8 @@ public class SpeciesManager
 
     protected virtual void SpeciesCooling()
     {
-        if (SpeciesList.Count < _minSpecies) _eps *= 1 + _factor;
-        if (SpeciesList.Count > _maxSpecies) _eps *= 1 - _factor;
+        if (SpeciesList.Count < _minSpecies) _eps += _factor;
+        if (SpeciesList.Count > _maxSpecies) _eps -= _factor;
         foreach (var species in SpeciesList) species.Members.Clear();
     }
 

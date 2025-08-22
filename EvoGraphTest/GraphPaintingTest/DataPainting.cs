@@ -4,17 +4,21 @@ public class DataPainting
 {
     public static int[][,] Data { get; private set; } = [];
 
-    public static int[] Label { get; private set; } = [];
+    public static int[] LabelGreedy { get; private set; } = [];
     
-    public static void Init(int count, int size, bool greedy = true)
+    public static int[] LabelFull { get; private set; } = [];
+    
+    public static void Init(int count, int size, bool full = false)
     {
         Data = new int[count][,];
-        Label = new int[count];
+        LabelGreedy = new int[count];
+        LabelFull = new int[count];
         for (var i = 0; i < count; i++)
         {
             var extraEdgeProb = Random.Shared.NextDouble() * 0.5;
             Data[i] = GenerateRandomConnectedGraphs(size, extraEdgeProb);
-            Label[i] = greedy ? GreedyColoring(Data[i]) : FindChromaticNumber(Data[i]);
+            LabelGreedy[i] = GreedyColoring(Data[i]);
+            if (full) LabelFull[i] = FindChromaticNumber(Data[i]);
         }
     }
 
