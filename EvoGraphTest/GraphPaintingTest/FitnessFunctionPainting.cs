@@ -32,7 +32,7 @@ public class FitnessFunctionPainting : IFitnessFunction
         foreach (var species in manager.SpeciesList)
         {
             species.MeanFitness = 0;
-            foreach (var member in species.Members)
+            Parallel.ForEach(species.Members, member =>
             {
                 var agent = member as AgentPainting ?? throw new Exception("Not a agent");
 
@@ -45,9 +45,10 @@ public class FitnessFunctionPainting : IFitnessFunction
                     if (Graph[i, j] != 1) continue;
                     conflicts += agent.Chromosome[i] == agent.Chromosome[j] ? 1 : 0;
                 }
+
                 agent.Fitness = paints + (agent.Chromosome.Length + 1) * conflicts;
                 species.MeanFitness += agent.Fitness / species.Members.Count;
-            }
+            });
             species.AdjustedFitness = 1.0 / species.MeanFitness;
             species.Members.Sort((x, y) => x.Fitness.CompareTo(y.Fitness));
             if (species.Members[0].Fitness < BestAgent.Fitness) BestAgent = species.Members[0];

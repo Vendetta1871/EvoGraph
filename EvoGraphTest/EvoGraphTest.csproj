@@ -26,6 +26,9 @@
     </ItemGroup>
 
     <ItemGroup>
+      <None Include="bin\Debug\net9.0\data\Node1.txt" />
+      <None Include="bin\Debug\net9.0\data\Node2.txt" />
+      <None Include="bin\Debug\net9.0\data\Node3.txt" />
       <None Include="bin\Debug\net9.0\nlog.config" />
     </ItemGroup>
 

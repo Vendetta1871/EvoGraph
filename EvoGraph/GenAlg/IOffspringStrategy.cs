@@ -8,17 +8,21 @@ public interface IOffspringStrategy
         if (count == 1) return [species.Members[0].Clone()];
         
         // Elite
-        List<IAgent> offspring = [species.Members[0].Clone()];
+        var offspring = new IAgent[count];
+        offspring[0] = species.Members[0].Clone();
         // Crossover
-        for (var i = 0; i < count - 1; i++)
+        Parallel.For(1, count, i =>
         {
             var i0 = ParentIndex();
             var i1 = Random.Shared.Next(species.Members.Count);
-            offspring.Add(species.Members[i0].Crossover(species.Members[i1]));
-        }
+            offspring[i] = species.Members[i0].Crossover(species.Members[i1]);
+        });
         // Mutate
-        for (var i = 1; i < count; i++) offspring[i] = offspring[i].Mutation();
-        return offspring;
+        Parallel.For(1, count, i =>
+        {
+            offspring[i] = offspring[i].Mutation();
+        });
+        return offspring.ToList();
         
         int ParentIndex()
         {

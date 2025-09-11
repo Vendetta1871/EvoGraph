@@ -19,8 +19,7 @@ public class FitnessFunctionRecovery: IFitnessFunction
         BestAgent = manager.SpeciesList[0].Members[0];
         foreach (var species in manager.SpeciesList)
         {
-            species.MeanFitness = 0;
-            foreach (var member in species.Members)
+            Parallel.ForEach(species.Members, member =>
             {
                 var agent = member as AgentRecovery ?? throw new Exception("Not a agent");
                 
@@ -34,7 +33,7 @@ public class FitnessFunctionRecovery: IFitnessFunction
                 }
                 agent.Fitness = fit / agent.Chromosome.Length / agent.Chromosome.Length;
                 species.MeanFitness += agent.Fitness / species.Members.Count;
-            }
+            });
             species.AdjustedFitness = 1.0 / species.MeanFitness;
             species.Members.Sort((x, y) => x.Fitness.CompareTo(y.Fitness));
             if (species.Members[0].Fitness < BestAgent.Fitness) BestAgent = species.Members[0];
