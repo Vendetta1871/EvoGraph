@@ -7,6 +7,59 @@ public static class DataRecovery
     
     public static int[] Clusters { get; private set; } = [];
     
+    public static void AddFromFile(string path, out int size, double p)
+    {
+        var labelList = Label.ToList();
+        var dataList = Data.ToList();
+        var clustersList = Clusters.ToList();
+        
+        var lines = File.ReadAllLines(path);
+        size = lines.Length;
+        labelList.Add(new int[size, size]);
+        dataList.Add(new int[size, size]);
+        for (var i = 0; i < size; i++)
+        {
+            var line = lines[i].Split(' ');
+            for (var j = i; j < size; j++)
+            {
+                labelList[^1][i, j] = 1 - int.Parse(line[j + 1]);
+                labelList[^1][j, i] = 1 - int.Parse(line[j + 1]);
+                if (Random.Shared.NextDouble() < 2) dataList[^1][i, j] = labelList[^1][i, j];
+                if (Random.Shared.NextDouble() < 2) dataList[^1][j, i] = labelList[^1][j, i];
+            }
+        }
+        
+        clustersList.Add(CountConnectedComponents(size));
+        
+        Label = labelList.ToArray();
+        Data = dataList.ToArray();
+        Clusters = clustersList.ToArray();
+        return;
+        
+        int CountConnectedComponents(int size)
+        {
+            bool[] visited = new bool[size];
+            int components = 0;
+
+            for (int i = 0; i < size; i++)
+                if (!visited[i])
+                {
+                    DFS(i);
+                    components++;
+                }
+
+            return components;
+            void DFS(int vertex)
+            {
+                visited[vertex] = true;
+
+                for (int neighbor = 0; neighbor < size; neighbor++)
+                    if (labelList[^1][vertex, neighbor] == 1 && !visited[neighbor])
+                        DFS(neighbor);
+            }
+        }
+    }
+    
     public static void Init(int count, int size, double p0, double p1, double pMiss)
     {
         Label = new int[count][,];

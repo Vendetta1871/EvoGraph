@@ -17,20 +17,26 @@ public class GenAlgRecoveryTest
     private static IEnumerable<(int[,], int[,], int)> GetRecoveryData()
     {
         const int matrixN = 20;
-        const int samples = 1;
+        const int samples = 100;
         DataRecovery.Init(samples, matrixN, 0.10, 0.10, 0.05);
+        for (var i = 0; i < samples; i++)
+            yield return (DataRecovery.Data[i], DataRecovery.Label[i], DataRecovery.Clusters[i]);
+    }
+    
+    private static IEnumerable<(int[,], int[,], int)> GetRecoveryDataFile()
+    {
+        var samples = 3;
+        DataRecovery.AddFromFile("./data/Node1.txt", out var size1, 0.5);
+        DataRecovery.AddFromFile("./data/Node2.txt", out var size2, 0.5);
+        DataRecovery.AddFromFile("./data/Node3.txt", out var size3, 0.5);
         for (var i = 0; i < samples; i++)
             yield return (DataRecovery.Data[i], DataRecovery.Label[i], DataRecovery.Clusters[i]);
     }
 
     [Theory]
     public static void MatrixRecoveryTest(
-        [ValueSource(nameof(GetRecoveryData))] (int[,] Data, int[,] Label, int Clusters) data)
+        [ValueSource(nameof(GetRecoveryDataFile))] (int[,] Data, int[,] Label, int Clusters) data)
     {
-        NLog.Common.InternalLogger.LogLevel = NLog.LogLevel.Trace;
-        NLog.Common.InternalLogger.LogToConsole = true;   // вывод в терминал
-        NLog.Common.InternalLogger.LogFile = "/home/sweetclit/.local/share/nlog-internal.log"; // куда писать debug лог
-        
         var agentsCount = 500;
         var maxIterations = 400;
         //var threshold = 1e-5;
@@ -93,11 +99,6 @@ public class GenAlgRecoveryTest
 
             return 2.0 * precision * recall / (precision + recall);
         }
-    }
-
-    public static void jshdf()
-    {
-        
     }
     
     private static List<IAgent> GetAgents(int count, int size)
